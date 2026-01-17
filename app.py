@@ -1,10 +1,12 @@
 import streamlit as st
+import os
 import tensorflow as tf
 import numpy as np
 from PIL import Image
 
-# Load model
-model = tf.keras.models.load_model("cifar10_cnn.h5")
+
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "cifar10_cnn.keras")
+model = tf.keras.models.load_model(MODEL_PATH)
 
 classes = [
     'airplane','automobile','bird','cat','deer',

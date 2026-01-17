@@ -6,7 +6,7 @@ from PIL import Image
 
 
 MODEL_PATH = os.path.join(os.path.dirname(__file__), "cifar10_cnn.keras")
-model = tf.keras.models.load_model(MODEL_PATH)
+model = tf.keras.models.load_model(MODEL_PATH, compile=False)
 
 classes = [
     'airplane','automobile','bird','cat','deer',
